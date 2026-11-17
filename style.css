@@ -1,0 +1,17 @@
+/* PingSafe site: the app's look (docs/design/stitch-v2/DESIGN.md), plain CSS, no build step. */
+:root { --canvas: #fbf8ff; --ink: #1a1b22; --muted: #5b5b63; --slate: #1c1c1e; --mint: #d5f5ee; --mint-ink: #005046; --lilac: #ecebfd; --butter: #fff3c9; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font: 500 16px/1.6 "Jakarta", "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; }
+h1 { font-size: 2rem; line-height: 1.2; font-weight: 800; letter-spacing: -0.02em; margin: 12px 0 16px; }
+h2 { font-size: 1.15rem; font-weight: 700; margin-top: 32px; }
+h3 { margin: 0 0 6px; font-size: 1rem; }
+.lead { font-size: 1.1rem; color: var(--muted); }
+.muted { color: var(--muted); font-size: 0.9rem; }
+.badge { display: inline-block; background: #8df1de99; color: #006b5e; border-radius: 999px; padding: 6px 14px; font-size: 0.8rem; font-weight: 600; margin: 0; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 28px 0; }
+.card { border-radius: 24px; padding: 20px; }
+.card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.mint { background: var(--mint); } .lilac { background: var(--lilac); } .butter { background: var(--butter); }
+a { color: var(--mint-ink); }
+li { margin: 6px 0; }

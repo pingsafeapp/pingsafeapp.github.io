@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PingSafe · Privacy policy</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/ui.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<p class="badge">Privacy policy</p>
+<h1>What PingSafe keeps, and for how long</h1>
+<p class="muted">Last updated: 14 November 2026. Contact: <a href="mailto:ramanujdodiya22@gmail.com">ramanujdodiya22@gmail.com</a></p>
+
+<p>PingSafe connects two phones: one person can ask where the other is ("ping"), and the other answers with one
+tap or automatically. There is no live tracking: a location is read only when someone answers a ping, sends a
+check-in, or when the low-battery alert they turned on fires.</p>
+
+<h2>No accounts</h2>
+<p>PingSafe has no sign-up, email or password. Each phone gets a random device ID and a secret key when it is set
+up. The server stores the ID and a one-way hash of the key.</p>
+
+<h2>What the server receives and keeps</h2>
+<ul>
+<li><b>Answers:</b> location (latitude, longitude, accuracy, place name), battery level, charging, network type
+and time. Only the <b>latest</b> answer is kept, for <b>one hour</b>, so the other phone can load it.</li>
+<li><b>Delivery records</b> for reliability and speed measurements: timings, phone model, network type and whether
+it worked. <b>No location.</b> Only the most recent records are kept (a fixed number, oldest removed first).</li>
+<li><b>Pairing:</b> which two device IDs are paired and their settings (answer mode, low-battery alert level,
+quiet hours with time zone, timed pings). Removed 7 days after unpairing.</li>
+<li><b>First names while pairing:</b> the first name typed when inviting or joining, and the relationship
+chosen for an invite. Deleted as soon as the invite is accepted, cancelled or expires, or the pairing request is
+approved or declined.</li>
+<li><b>Streak:</b> the dates (not times or places) on which the sharing phone answered, and its time zone.</li>
+<li><b>Push address:</b> the phone's Firebase installation ID, so pings can reach it. The device ID, key hash and push address are kept until you ask us to delete them.</li>
+<li><b>IP addresses</b> are used briefly for abuse limits (e.g. code guessing) and are not stored with answers.</li>
+</ul>
+
+<h2>What stays on the phones only</h2>
+<ul>
+<li>The name and phone number you save for the other person.</li>
+<li>The <b>log</b>: the last 50 pings, answers and check-ins, with time, how, and where the location was, so you
+can open a place again in Maps. It is never uploaded. Uninstalling PingSafe or clearing its data deletes it.</li>
+</ul>
+
+<h2>Who else is involved</h2>
+<ul>
+<li><b>Google Firebase Cloud Messaging</b> delivers the pings. Pings carry only IDs and preset keys, never names
+or places.</li>
+<li><b>Upstash</b> (Redis) stores the server data above.</li>
+<li><b>Counts for measuring PingSafe:</b> daily totals (for example how many pings were sent and answered),
+how long answers took (including the time from tapping Ping to seeing the answer, sent by the checking phone as a
+number only), and an estimate of how many phones used PingSafe each day and week. The estimate uses a method
+(HyperLogLog) that can count phones but cannot list or identify them. None of these include names, places, phone
+numbers or IDs.</li>
+<li>During testing, PingSafe's server runs on <b>The Vibe Hosting</b>, on machines in Germany (Hetzner).</li>
+<li><b>GitHub</b> hosts the app's download file. Test versions of the app ask GitHub about once a day whether a
+newer version exists (this can be turned off in Settings), and download it only when you tap Update. GitHub sees
+your phone's IP address, as with any download; nothing about you or your pairing is sent.</li>
+<li><b>Map pictures</b> are drawn by Google Maps on the checking phone. Google sees roughly which area was
+viewed; see <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</li>
+<li>The phone's own place-name lookup (Android Geocoder) turns coordinates into a place name.</li>
+</ul>
+<p>We do not sell data, show ads, or share data with anyone else.</p>
+
+<h2>Background location</h2>
+<p>"Allow all the time" is asked for only for auto-answer and the low-battery alert. Even then, the location is
+read only when a ping arrives or once when the battery reaches the chosen level. The person sharing gets a
+notification every time their location is sent.</p>
+
+<h2>Your choices</h2>
+<ul>
+<li>Unpair at any time in Settings, on either phone. The latest answer is deleted at once.</li>
+<li>Turn off auto-answer, the low-battery alert or timed pings with one tap.</li>
+<li>Uninstall PingSafe or clear its data to delete everything on the phone. If one phone does this, the other is
+unpaired automatically.</li>
+<li>To have any server data deleted sooner, write to the contact address above.</li>
+</ul>
+
+<h2>Security</h2>
+<p>Everything travels over encrypted connections (HTTPS). Data on the server is not yet end-to-end encrypted.</p>
+
+<h2>Children</h2>
+<p>PingSafe is not directed at children under 13. A parent who uses it with a child should set it up together.</p>
+
+<p class="muted"><a href="index.html">← PingSafe</a></p>
+</main>
+</body>
+</html>
